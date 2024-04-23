@@ -1,0 +1,99 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: var(--body_background);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: var(--body_color);
+}
+
+.App-link {
+  color: var(link_color);
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loader-table {
+  border-collapse: collapse;
+  table-layout: fixed; /* Added to ensure uniform cell width */
+  width: 100%; /* Added to ensure table takes full width */
+  height: 800px;
+}
+
+.loader-table td,
+.loader-table th {
+  padding: 0; /* Removed padding to eliminate extra spacing */
+  border: 1px solid transparent;
+  vertical-align: top; /* Aligns content at the top */
+}
+
+.loader-table td > div {
+  width: 100%; /* Ensure loader takes full width of cell */
+  height: 100%; /* Ensure loader takes full height of cell */
+}
+
+.table-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjust height to fill the viewport */
+  margin-left: 10px; /* Adds space from the left */
+  margin-right: 10px; /* Adds space from the right */
+  background: transparent;
+}
+
+.Loader .table-div {
+  /* text-align: center; */
+  /* height: 300px;  */
+  width: 400px;
+}
+
+
+.Loader-header {
+  /* background-color: var(--body_background); */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: var(--body_color);
+}
+
+@media (min-width: 768px) {
+  /* For laptops and PCs, 3 columns layout */
+  .loader-table tr td {
+    width: 33.33%;
+  }
+}
+
+@media (max-width: 767px) {
+  /* For mobile devices, 1 column layout */
+  .loader-table tr td {
+    width: 100%;
+  }
+}
